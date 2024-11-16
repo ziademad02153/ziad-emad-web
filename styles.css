@@ -1,0 +1,1342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Blue Theme Colors */
+    --blue-50: #f0f7ff;
+    --blue-100: #e0f0ff;
+    --blue-200: #bfdbfe;
+    --blue-300: #93c5fd;
+    --blue-400: #60a5fa;
+    --blue-500: #3b82f6;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    
+    /* Neutral Colors */
+    --white: #ffffff;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    
+    /* Gradients */
+    --gradient-blue: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-400) 100%);
+    --bg-primary: var(--white);
+    --bg-secondary: var(--gray-50);
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.15);
+    --primary-text: #2d3748;
+    --secondary-text: #4a5568;
+    --background: #f8fafc;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--background);
+    color: var(--primary-text);
+    min-height: 100vh;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 80px auto 0;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.profile-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    border: 4px solid var(--blue-100);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.skill-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.2rem;
+    min-width: 120px;
+    border-radius: 12px;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: none;
+}
+
+.skill-badge.skill-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-badge i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill-badge span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Skill Icons Colors */
+.skill-badge:nth-child(1) i { color: #E44D26; }  /* HTML */
+.skill-badge:nth-child(2) i { color: #264DE4; }  /* CSS */
+.skill-badge:nth-child(3) i { color: #F7DF1E; }  /* JavaScript */
+.skill-badge:nth-child(4) i { color: #7952B3; }  /* Bootstrap */
+.skill-badge:nth-child(5) i { color: #CD6799; }  /* SASS */
+.skill-badge:nth-child(6) i { color: #F05032; }  /* Git */
+.skill-badge:nth-child(7) i { color: #171515; }  /* GitHub */
+.skill-badge:nth-child(8) i { color: #000000; }  /* Command Line */
+.skill-badge:nth-child(9) i { color: #007ACC; }  /* TypeScript */
+.skill-badge:nth-child(10) i { color: #61DAFB; } /* React */
+.skill-badge:nth-child(11) i { color: #000000; } /* Next.js */
+.skill-badge:nth-child(12) i { color: #38B2AC; } /* Tailwind */
+
+.skill-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.html { background: linear-gradient(45deg, #E44D26, #F16529); }
+.css { background: linear-gradient(45deg, #264DE4, #2965F1); }
+.javascript { 
+    background: linear-gradient(45deg, #F7DF1E, #F0DB4F);
+    color: #323330;
+}
+.react { 
+    background: linear-gradient(45deg, #61DAFB, #00B7FF);
+    color: #282c34;
+}
+.bootstrap { background: linear-gradient(45deg, #7952B3, #553C7B); }
+.sass { background: linear-gradient(45deg, #CD6799, #BE4B80); }
+.git { background: linear-gradient(45deg, #F05032, #D84E2B); }
+.github { background: linear-gradient(45deg, #24292E, #1B1F23); }
+.responsive { background: linear-gradient(45deg, #38B2AC, #319795); }
+.typescript { background: linear-gradient(45deg, #3178C6, #235A97); }
+.next { background: linear-gradient(45deg, #000000, #111111); }
+.tailwind { background: linear-gradient(45deg, #38B2AC, #0694A2); }
+
+.contact-section {
+    padding: 3rem 0;
+    margin-bottom: 0;
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-text);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card:hover .ios-icon {
+    transform: scale(1.1);
+}
+
+.ios-icon {
+    min-width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: var(--primary-text);
+}
+
+.contact-info p {
+    font-size: 0.95rem;
+    color: var(--secondary-text);
+    margin: 0;
+}
+
+.contact-card.email {
+    border-left: 4px solid #EA4335;
+}
+
+.contact-card.phone {
+    border-left: 4px solid #34B7F1;
+}
+
+.contact-card.whatsapp {
+    border-left: 4px solid #25D366;
+}
+
+.contact-card.snapchat {
+    border-left: 4px solid #FFFC00;
+}
+
+.email .ios-icon {
+    background: #EA4335;
+    color: white;
+}
+
+.phone .ios-icon {
+    background: #34B7F1;
+    color: white;
+}
+
+.whatsapp .ios-icon {
+    background: #25D366;
+    color: white;
+}
+
+.snapchat .ios-icon {
+    background: #FFFC00;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+    }
+
+    .contact-card {
+        padding: 1.2rem;
+    }
+
+    .ios-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1rem;
+    }
+
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+}
+
+.contact-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.2)
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.contact-card:hover::before {
+    opacity: 1;
+}
+
+/* ضافة قسم المشاريع */
+.projects-section {
+    padding: 2rem 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    background: var(--bg-secondary);
+}
+
+.project-card {
+    background: var(--bg-secondary);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-link {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    background: #0984e3;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    color: #2d3436;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.project-description {
+    color: #636e72;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    background: #f1f2f6;
+    color: #2d3436;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Social Links تحت الصورة الشخصية */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 0.4rem 0;
+}
+
+.social-link i {
+    font-size: 1.2rem;
+}
+
+.social-link span {
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+/* Instagram Gradient */
+.social-link.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+/* Snapchat Style */
+.social-link.snapchat {
+    background: #FFFC00;
+    color: #000000;
+}
+
+/* GitHub Style */
+.social-link.github {
+    background-color: #333;
+}
+
+/* Hover Effects */
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow-hover);
+    filter: brightness(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social-links {
+        padding: 0;
+    }
+    
+    .social-link {
+        padding: 0.7rem 1.2rem;
+    }
+    
+    .social-link span {
+        font-size: 0.85rem;
+    }
+}
+
+/* ألوان مواقع التواصل */
+.linkedin {
+    background: linear-gradient(45deg, #0a66c2, #0077b5);
+}
+
+.github {
+    background: linear-gradient(45deg, #24292e, #2b3137);
+}
+
+.instagram {
+    background: linear-gradient(45deg, #833AB4, #C13584, #E1306C);
+}
+
+.x-twitter {
+    background: linear-gradient(45deg, #000000, #141414);
+}
+
+/* قسم الشهادات والكورسات */
+.certificates-section {
+    padding: 4rem 0;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.certificate-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.course-icon {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    padding: 2rem;
+}
+
+.course-icon img {
+    width: 100px;
+    height: 100px;
+    transition: all 0.3s ease;
+}
+
+.certificate-card:hover .course-icon img {
+    transform: scale(1.1);
+}
+
+.certificate-content {
+    padding: 1.5rem;
+}
+
+.certificate-content h3 {
+    color: #2d3436;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.certificate-content p {
+    color: #636e72;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.certificate-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.certificate-platform {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #636e72;
+    font-size: 0.9rem;
+}
+
+.certificate-platform i {
+    color: #0984e3;
+}
+
+.certificate-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #0984e3;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.certificate-link:hover {
+    transform: translateX(-5px);
+}
+
+/* صور للغات مع روابط مباشرة */
+.html-icon {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg');
+    background-color: #FFF4F2;
+}
+
+.css-icon {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg');
+    background-color: #F2F7FF;
+}
+
+.js-icon {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg');
+    background-color: #FFFDF2;
+}
+
+.bootstrap-icon {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg');
+    background-color: #F9F2FF;
+}
+
+.sass-icon {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg');
+    background-color: #FFF2F7;
+}
+
+.git-icon {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg');
+    background-color: #FFF2F2;
+}
+
+.cmd-icon {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg');
+    background-color: #F2F2F2;
+}
+
+.ts-icon {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg');
+    background-color: #F2F9FF;
+}
+
+.react-icon {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg');
+    background-color: #F2FBFF;
+}
+
+.next-icon {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg');
+    background-color: #F2F2F2;
+}
+
+.certificate-card:hover .course-icon {
+    background-size: 130px;
+    transition: background-size 0.3s ease;
+}
+
+/* Modern Header Styling */
+.modern-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-direction: row-reverse;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.first-name {
+    color: #000000;
+}
+
+.last-name {
+    color: var(--blue-600);
+}
+
+.slash-container {
+    position: relative;
+    width: 12px;
+    height: 28px;
+    margin: 0 2px;
+}
+
+.slash-left,
+.slash-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+}
+
+.slash-left {
+    color: #000000;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.slash-right {
+    color: var(--blue-600);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+/* Hover Effect */
+.logo:hover .first-name {
+    transform: translateX(-2px);
+}
+
+.logo:hover .last-name {
+    transform: translateX(2px);
+}
+
+.logo span {
+    transition: all 0.3s ease;
+}
+
+/* Navigation Menu */
+.main-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    direction: rtl;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--blue-600);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    background: var(--white);
+}
+
+.nav-item i {
+    font-size: 1.1rem;
+}
+
+.nav-item:hover {
+    background: var(--blue-50);
+    transform: translateY(-2px);
+}
+
+.nav-item.active {
+    background: var(--gradient-blue);
+    color: var(--white);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main-nav {
+        width: 100%;
+        overflow-x: auto;
+        padding: 0.5rem;
+        justify-content: start;
+    }
+
+    .nav-item {
+        white-space: nowrap;
+    }
+}
+
+/* Add this in your HTML head for the Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Scroll Padding for Fixed Header */
+html {
+    scroll-padding-top: 80px; /* تعديل هذه القيمة حسب ارتفاع الهيدر */
+}
+
+/* LinkedIn Style */
+.social-link.linkedin {
+    background-color: #0077B5;
+}
+
+/* Additional Contact Styles */
+.social-link.email {
+    background: #EA4335;
+}
+
+.social-link.phone {
+    background: #4CAF50;
+}
+
+.social-link.whatsapp {
+    background: #25D366;
+}
+
+/* Adjust spacing for longer text */
+.social-link {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 0.4rem 0;
+}
+
+.social-link span {
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Hover effect */
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-link {
+        padding: 0.7rem 1.2rem;
+    }
+    
+    .social-link span {
+        font-size: 0.85rem;
+    }
+}
+
+/* WhatsApp Style in Social Links */
+.social-link.whatsapp {
+    background-color: #25D366;
+}
+
+.social-link.whatsapp:hover {
+    background-color: #22c55e;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-light);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+/* Fade In Animation */
+.main-card {
+    opacity: 1;
+    transform: none;
+    transition: all 0.6s ease;
+}
+
+.main-card.fade-in {
+    opacity: 1;
+    transform: none;
+}
+
+/* Skill Badge Animation */
+.skill-badge {
+    transition: all 0.3s ease;
+}
+
+.skill-animate {
+    animation: skillPulse 0.5s ease;
+}
+
+@keyframes skillPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Profile Image Transition */
+.profile-image {
+    transition: transform 0.2s ease-out;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Loading Animation */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+/* Social Links Styling */
+.social-link.snapchat {
+    background: #FFFC00;  /* لون سناب شات الأصفر */
+    color: #000000;      /* لون الأيقونة أسود */
+}
+
+.social-link.snapchat span {
+    color: #000000;      /* لون النص أسود */
+}
+
+.social-link.snapchat:hover {
+    background: #FFFC00;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 252, 0, 0.4);
+}
+
+/* Contact Card Snapchat Icon */
+.contact-card.snapchat .ios-icon {
+    background: #FFFC00;
+    color: #000000;
+}
+
+.contact-card.snapchat:hover {
+    border-color: #FFFC00;
+}
+
+/* Social Links with Matching Text Colors */
+/* LinkedIn */
+.social-link.linkedin {
+    background: #0077B5;
+}
+.social-link.linkedin span {
+    color: #ffffff;
+}
+.social-link.linkedin:hover {
+    box-shadow: 0 5px 15px rgba(0, 119, 181, 0.4);
+}
+
+/* Instagram */
+.social-link.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+.social-link.instagram span {
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.social-link.instagram:hover {
+    box-shadow: 0 5px 15px rgba(225, 48, 108, 0.4);
+}
+
+/* Snapchat */
+.social-link.snapchat {
+    background: #FFFC00;
+}
+.social-link.snapchat span {
+    color: #000000;
+    font-weight: 600;
+}
+.social-link.snapchat:hover {
+    box-shadow: 0 5px 15px rgba(255, 252, 0, 0.4);
+}
+
+/* WhatsApp */
+.social-link.whatsapp {
+    background: #25D366;
+}
+.social-link.whatsapp span {
+    color: #ffffff;
+}
+.social-link.whatsapp:hover {
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+/* GitHub */
+.social-link.github {
+    background: #333;
+}
+.social-link.github span {
+    color: #ffffff;
+}
+.social-link.github:hover {
+    box-shadow: 0 5px 15px rgba(51, 51, 51, 0.4);
+}
+
+/* Contact Cards Matching Colors */
+/* Email */
+.contact-card.email .ios-icon {
+    background: #EA4335;
+    color: white;
+}
+.contact-card.email h3 {
+    color: #EA4335;
+}
+
+/* WhatsApp Contact */
+.contact-card.whatsapp .ios-icon {
+    background: #25D366;
+    color: white;
+}
+.contact-card.whatsapp h3 {
+    color: #25D366;
+}
+
+/* Snapchat Contact */
+.contact-card.snapchat .ios-icon {
+    background: #FFFC00;
+    color: black;
+}
+.contact-card.snapchat h3 {
+    color: black;
+}
+
+/* General Social Link Styling */
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.social-link i {
+    font-size: 1.2rem;
+}
+
+.social-link span {
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+/* Hover Effects */
+.social-link:hover span {
+    transform: scale(1.05);
+}
+
+/* Logo Container Styling */
+.logo-container {
+    background: rgba(0, 0, 0, 0.03);
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    direction: ltr;
+}
+
+.code-block {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Consolas', monospace;
+}
+
+.code-tag {
+    color: #808080;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 5px;
+}
+
+.first-name {
+    color: #000000;
+}
+
+.last-name {
+    color: var(--blue-600);
+}
+
+.slash-container {
+    position: relative;
+    margin: 0 2px;
+}
+
+.slash {
+    font-weight: 400;
+    background: linear-gradient(to right, 
+        #000 0%, 
+        #000 50%, 
+        var(--blue-600) 50%, 
+        var(--blue-600) 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+/* Hover Effects */
+.logo-container:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
+    transition: all 0.3s ease;
+}
+
+.logo-container:hover .code-tag {
+    opacity: 1;
+}
+
+/* Particles Background */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(to right, #3b82f6, #60a5fa);
+    z-index: 1000;
+    transition: width 0.2s ease;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3b82f6;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.2s ease;
+    transform: translate(-50%, -50%);
+}
+
+/* Hover Effects */
+.project-card, .skill-badge, .contact-card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+/* Glass Morphism */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+/* Neon Effect */
+.neon-text {
+    text-shadow: 0 0 5px #3b82f6,
+                 0 0 10px #3b82f6,
+                 0 0 20px #3b82f6;
+}
+
+/* Loading Animation */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader-content {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #f3f3f3;
+}
+
+/* تأثيرات المهارات */
+.skill-badge {
+    opacity: 1;
+    transform: none;
+    transition: all 0.5s ease;
+}
+
+.skill-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.pulse {
+    animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.skill-percentage {
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    background: var(--blue-600);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+/* احتفظ بكل الكود CSS الأصلي */
+
+/* إضافة التحسينات الجديدة في النهاية */
+.modern-effects {
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+/* تنسيق الإشعار */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    pointer-events: none; /* منع التفاعل مع الإشعار */
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+/* تحديث تنسيق المعلومات الشخصية */
+.info-item a {
+    text-decoration: none;
+    color: var(--blue-600);
+    transition: all 0.3s ease;
+}
+
+.info-item a:hover {
+    color: var(--blue-700);
+    text-decoration: underline;
+}
+
+.location-link, .email-link {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.location-link:hover {
+    background: var(--blue-50);
+    transform: translateX(5px);
+}
+
+.email-link:hover {
+    background: var(--blue-50);
+    transform: translateX(5px);
+}
+
+.info-item p {
+    color: var(--blue-600);
+    font-weight: 500;
+}
+
+/* تحسين التجاوب */
+@media (max-width: 768px) {
+    .info-item p, 
+    .info-item a {
+        font-size: 0.9rem;
+        word-break: break-word;
+    }
+}
+  
+  
