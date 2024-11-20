@@ -1751,5 +1751,33 @@ html {
 .certificates-grid::-webkit-scrollbar {
     display: none !important; /* إخفاء شريط التمرير في Chrome */
 }
+
+/* تعديلات أساسية للموبايل */
+@media screen and (max-width: 768px) {
+    /* تعديل الحاوية الرئيسية */
+    body {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .container {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 10px !important;
+        border-radius: 0 !important;
+    }
+
+    /* تعديل المهارات */
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+    }
+
+    /* تعديل بطاقات التواصل */
+    .contact-card {
+        width: 100% !important;
+        margin: 5px 0 !important;
+    }
+}
   
   
