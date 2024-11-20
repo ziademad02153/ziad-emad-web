@@ -40,33 +40,34 @@
 /* Global Styles */
 body {
     font-family: 'Cairo', sans-serif;
-    background-color: var(--background);
-    color: var(--primary-text);
-    min-height: 100vh;
+    background: none !important;
+    background-color: transparent !important;
+    min-height: 100vh !important;
+    margin: 0;
     padding: 0;
+    color: var(--primary-text);
     line-height: 1.6;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 80px auto 0;
     padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 30px;
-    box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.1),
-        0 1px 8px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border-radius: 20px;
+    box-shadow: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15) !important;
 }
 
 .profile-section {
     text-align: center;
     padding: 3rem 2rem;
     margin-bottom: 2rem;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 .profile-image {
@@ -87,22 +88,27 @@ body {
     padding: 2rem;
     margin: 0 auto;
     max-width: 1200px;
+    direction: rtl;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 .skill-badge {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    padding: 1.2rem;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1.5rem;
     min-width: 120px;
+    min-height: 120px;
     border-radius: 12px;
-    background: white;
-    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
-    opacity: 1;
-    transform: none;
 }
 
 .skill-badge.skill-visible {
@@ -111,13 +117,16 @@ body {
 }
 
 .skill-badge i {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
 }
 
 .skill-badge span {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
+    text-align: center;
+    color: var(--primary-text);
 }
 
 /* Skill Icons Colors */
@@ -137,6 +146,10 @@ body {
 .skill-badge:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.skill-badge:hover i {
+    transform: scale(1.1);
 }
 
 .html { background: linear-gradient(45deg, #E44D26, #F16529); }
@@ -161,6 +174,8 @@ body {
 .contact-section {
     padding: 3rem 0;
     margin-bottom: 0;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 .contact-section h2 {
@@ -188,6 +203,12 @@ body {
     transition: all 0.3s ease;
     text-decoration: none;
     color: inherit;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    direction: ltr !important;
 }
 
 .contact-card:hover {
@@ -206,13 +227,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 0;
+    margin-right: 15px !important;
+    margin-left: 0 !important;
     font-size: 1.5rem;
     transition: all 0.3s ease;
 }
 
 .contact-info {
     flex: 1;
+    text-align: left !important;
 }
 
 .contact-info h3 {
@@ -220,12 +243,16 @@ body {
     font-weight: 600;
     margin-bottom: 0.3rem;
     color: var(--primary-text);
+    text-align: left !important;
 }
 
 .contact-info p {
     font-size: 0.95rem;
     color: var(--secondary-text);
     margin: 0;
+    direction: ltr !important;
+    text-align: left !important;
+    font-family: 'Cairo', sans-serif;
 }
 
 .contact-card.email {
@@ -328,20 +355,21 @@ body {
 }
 
 .project-card {
+    background: var(--bg-secondary);
     border-radius: 15px;
     overflow: hidden;
-    background: white;
-    box-shadow: 
-        0 5px 15px rgba(0, 0, 0, 0.08),
-        0 0 5px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 
-        0 8px 25px rgba(0, 0, 0, 0.1),
-        0 0 10px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--card-shadow-hover);
 }
 
 .project-image {
@@ -355,7 +383,6 @@ body {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
-    border-radius: 15px 15px 0 0;
 }
 
 .project-overlay {
@@ -422,17 +449,12 @@ body {
 }
 
 .tech-tag {
-    border-radius: 12px;
-    padding: 6px 12px;
-    background: rgba(0, 123, 255, 0.1);
-    color: #007bff;
+    background: #f1f2f6;
+    color: #2d3436;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
     font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.tech-tag:hover {
-    background: rgba(0, 123, 255, 0.2);
-    transform: translateY(-2px);
 }
 
 /* Social Links تحت الصورة الشخصية */
@@ -531,18 +553,30 @@ body {
 }
 
 .certificates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    gap: 2rem !important;
+    padding: 2rem !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
 }
 
 .certificate-card {
+    min-width: 300px !important;
+    flex: 0 0 auto !important;
+    scroll-snap-align: start !important;
     background: white;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .certificate-card:hover {
@@ -682,12 +716,12 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .nav-container {
@@ -698,6 +732,7 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     flex-direction: row-reverse;
+    background: transparent !important;
 }
 
 /* Logo Styling */
@@ -1312,7 +1347,7 @@ html {
     opacity: 1;
 }
 
-/* تحديث تنسيق المعلومات الشخصية */
+/* تحديث تنسي المعلومات الشخصية */
 .info-item a {
     text-decoration: none;
     color: var(--blue-600);
@@ -1403,6 +1438,225 @@ html {
     height: 220px;
     object-fit: cover;
     transition: transform 0.3s ease;
+}
+
+/* تأثير الخلفية المتحركة */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* تأثيرات حركية للبطاقات */
+.project-card, .skill-badge, .contact-card {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.project-card:hover, .skill-badge:hover, .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* تأثير النص المضيء */
+.profile-section h1 {
+    background: linear-gradient(45deg, #007bff, #00ff88);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* fallback */
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    }
+    to {
+        text-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+    }
+}
+
+/* تأثير تحميل متدرج */
+.skill-badge {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تأثير زر التواصل النابض */
+.contact-card .ios-icon {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* تحسن أداء الانيميشن */
+.skill-badge, .project-card, .contact-card {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* تحسين تأثير الـ hover للبطاقات */
+.project-card:hover, .skill-badge:hover, .contact-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* تحسين أداء الـ particles */
+#particles-js {
+    pointer-events: none;
+}
+
+/* تحسين أداء الـ scroll */
+.scroll-progress {
+    transform: translateZ(0);
+    will-change: width;
+}
+
+/* تحسين تأثير الـ loading */
+.loader {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* تحسين توافق النص المتدرج */
+.profile-section h1 {
+    background: linear-gradient(45deg, #007bff, #00ff88);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* fallback */
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* تحسين توافق الشعار */
+.logo .slash {
+    background: linear-gradient(to right, 
+        #000 0%, 
+        #000 50%, 
+        var(--blue-600) 50%, 
+        var(--blue-600) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* fallback */
+}
+
+/* إزالة الخلفية البيضاء من العناصر الأخرى */
+.container, .profile-section, .skill-badge, .contact-card {
+    background-color: transparent !important;
+}
+
+/* إزالة البلور من البطاقات الفردية */
+.skill-badge,
+.project-card,
+.contact-card,
+.certificate-card {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: none !important;  /* إزالة البلور */
+    -webkit-backdrop-filter: none !important;  /* إزالة البلور لمتصفح Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* جعل الخلفية شفافة تماماً */
+.container,
+.profile-section,
+.skills-container,
+.projects-section,
+.contact-section,
+.certificates-section {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* إزالة الحدود من الأيقونات */
+.skill-badge {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* إزالة أي خلفيات بيضاء من الأقسام */
+.profile-section,
+.skills-container,
+.projects-section,
+.contact-section,
+.certificates-section {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* تنسيق قسم الشهادات للتمرير الأفقي */
+.certificates-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    gap: 2rem !important;
+    padding: 2rem !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+/* تنسيق بطاقات الشهادات */
+.certificate-card {
+    min-width: 300px !important;
+    flex: 0 0 auto !important;
+    scroll-snap-align: start !important;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* تنسيق شريط التمرير */
+.certificates-grid::-webkit-scrollbar {
+    height: 8px !important;
+}
+
+.certificates-grid::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 4px !important;
+}
+
+.certificates-grid::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2) !important;
+    border-radius: 4px !important;
+}
+
+.certificates-grid::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3) !important;
 }
   
   

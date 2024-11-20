@@ -40,4 +40,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // تشغيل الوظائف
     smoothScroll();
     animateSkills();
+
+    // تفعيل particles.js
+    particlesJS.load('particles-js', 'particles.json');
+
+    // تأثير ظهور تدريجي عند التمرير
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.project-card, .skill-badge, .contact-card').forEach(el => {
+        observer.observe(el);
+    });
+
+    // تأثير كتابة تلقائي للعنوان
+    const typed = new Typed('#typed-text', {
+        strings: ['Front-End Developer', 'Web Designer', 'UI Developer'],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true
+    });
 }); 
