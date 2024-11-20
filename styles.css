@@ -1857,89 +1857,51 @@ html {
         top: 0 !important;
         left: 0 !important;
         width: 100% !important;
-        height: 40px !important;
+        height: 35px !important; /* تصغير ارتفاع الشريط */
         background: rgba(255, 255, 255, 0.1) !important;
         backdrop-filter: blur(8px) !important;
         -webkit-backdrop-filter: blur(8px) !important;
         z-index: 9999 !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        padding: 0 8px !important;
     }
 
-    /* تصغير وضبط الأيقونة العلوية */
-    .nav-container {
-        height: 100% !important;
-        padding: 0 10px !important;
+    /* تصغير وتحسين أيقونة Ziad Emad */
+    .nav-brand {
+        font-size: 12px !important; /* تصغير حجم الخط */
+        padding: 3px 6px !important; /* تقليل الهوامش الداخلية */
+        background: rgba(255, 255, 255, 0.1) !important;
+        border-radius: 4px !important;
+        margin-right: 8px !important;
+        height: 22px !important; /* تحديد الارتفاع */
         display: flex !important;
         align-items: center !important;
+    }
+
+    /* تحسين القائمة العلوية */
+    .nav-container {
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        padding: 0 5px !important;
     }
 
     .main-nav {
-        gap: 10px !important;
+        gap: 6px !important; /* تقليل المسافة بين العناصر */
     }
 
     .nav-item {
-        font-size: 12px !important;
-        padding: 5px 10px !important;
+        font-size: 11px !important; /* تصغير حجم الخط */
+        padding: 3px 6px !important; /* تقليل الهوامش الداخلية */
+        height: 22px !important; /* توحيد الارتفاع مع الأيقونة */
+        display: flex !important;
+        align-items: center !important;
     }
 
-    /* تحسين المسافات العامة */
+    /* ضبط المسافة العلوية للمحتوى */
     .container {
         margin-top: 45px !important;
-        padding: 15px !important;
+        padding-top: 10px !important;
     }
-
-    /* تحسين قسم الملف الشخصي */
-    .profile-section {
-        padding: 15px !important;
-    }
-
-    .profile-image {
-        width: 120px !important;
-        height: 120px !important;
-    }
-
-    /* تحسين خانات التواصل */
-    .contact-container {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px !important;
-        padding: 10px !important;
-    }
-
-    .contact-card {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        padding: 12px !important;
-        gap: 10px !important;
-        height: auto !important;
-    }
-
-    .ios-icon {
-        width: 22px !important;
-        height: 22px !important;
-        margin: 0 !important;
-    }
-
-    .contact-info {
-        text-align: left !important;
-        align-items: flex-start !important;
-    }
-
-    .contact-info h3 {
-        font-size: 12px !important;
-        margin-bottom: 2px !important;
-    }
-
-    .contact-info p {
-        font-size: 11px !important;
-    }
-
-    /* تحسين أحجام النصوص */
-    h1 { font-size: 1.3rem !important; }
-    h2 { font-size: 1.1rem !important; }
-    h3 { font-size: 1rem !important; }
-    p { font-size: 0.9rem !important; }
 }
 
 @media screen and (max-width: 768px) {
