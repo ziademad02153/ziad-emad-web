@@ -1658,5 +1658,98 @@ html {
 .certificates-grid::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.3) !important;
 }
+
+/* تحسينات شاملة للموبايل */
+@media (max-width: 768px) {
+    /* تصغير الهوامش العلوية */
+    .container {
+        margin-top: 20px !important;
+        width: 95% !important;
+    }
+
+    /* تحسين قسم الملف الشخصي */
+    .profile-section {
+        margin: 0 !important;
+        padding: 1.5rem !important;
+    }
+
+    /* تنظيم المهارات بشكل أفضل */
+    .skills-container {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* 3 أيقونات في كل صف */
+        gap: 10px !important;
+        padding: 10px !important;
+    }
+
+    .skill-badge {
+        padding: 10px !important;
+        margin: 0 !important;
+    }
+
+    /* تحسين أقسام التواصل */
+    .contact-container {
+        padding: 10px !important;
+    }
+
+    .contact-card {
+        margin: 5px 0 !important;
+        padding: 12px !important;
+    }
+
+    /* تحسين الشهادات */
+    .certificates-grid {
+        gap: 15px !important;
+        padding: 10px !important;
+    }
+
+    .certificate-card {
+        min-width: 280px !important;
+        margin-right: 15px !important;
+    }
+}
+
+/* تحسينات للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    /* تصغير الأيقونات */
+    .skill-badge i {
+        font-size: 1.5rem !important;
+    }
+
+    .skill-badge span {
+        font-size: 0.7rem !important;
+    }
+
+    /* تعديل عرض البطاقات */
+    .contact-card {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+
+    .ios-icon {
+        margin: 0 auto 10px !important;
+    }
+
+    /* تحسين المسافات */
+    h1 { font-size: 1.5rem !important; }
+    h2 { font-size: 1.3rem !important; }
+    h3 { font-size: 1.1rem !important; }
+    p { font-size: 0.9rem !important; }
+}
+
+/* تحسين التمرير والأداء */
+* {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+}
+
+/* تحسين أداء التمرير */
+.certificates-grid {
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important; /* إخفاء شريط التمرير في Firefox */
+}
+
+.certificates-grid::-webkit-scrollbar {
+    display: none !important; /* إخفاء شريط التمرير في Chrome */
+}
   
   
