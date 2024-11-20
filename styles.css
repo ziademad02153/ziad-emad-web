@@ -1383,7 +1383,7 @@ html {
     font-weight: 500;
 }
 
-/* ��حسين التجاوب */
+/* حسين التجاوب */
 @media (max-width: 768px) {
     .info-item p, 
     .info-item a {
@@ -1857,9 +1857,13 @@ html {
         top: 0 !important;
         left: 0 !important;
         width: 100% !important;
-        height: 30px !important; /* تصير أكثر */
-        background: rgba(255, 255, 255, 0.05) !important;
+        height: 45px !important;
+        background: rgba(255, 255, 255, 0.1) !important;
+        backdrop-filter: blur(8px) !important;
         z-index: 9999 !important;
+        padding: 0 15px !important;
+        display: flex !important;
+        align-items: center !important;
     }
 
     /* تصغير أيقونة Ziad Emad بشكل أكبر */
@@ -1873,10 +1877,8 @@ html {
 
     /* تصغير عناصر القائمة */
     .nav-item {
-        font-size: 10px !important;
-        padding: 2px 5px !important;
-        height: 18px !important;
-        line-height: 14px !important;
+        font-size: 12px !important;
+        padding: 5px 10px !important;
     }
 
     .main-nav {
@@ -2027,19 +2029,17 @@ body {
 @media screen and (max-width: 768px) {
     /* تصغير حجم الاسم داخل الأيقونة في بداية الموقع */
     .dev {
-        font-size: 12px !important;
-        padding: 3px 6px !important;
-        margin: 5px 0 !important;
+        font-size: 14px !important;
+        padding: 5px 10px !important;
         background: rgba(255, 255, 255, 0.1) !important;
         border-radius: 4px !important;
         display: inline-flex !important;
         align-items: center !important;
-        gap: 2px !important;
-        line-height: 1 !important;
+        gap: 3px !important;
     }
 
     .dev span {
-        font-size: 12px !important;
+        font-size: 14px !important;
     }
 }
   
