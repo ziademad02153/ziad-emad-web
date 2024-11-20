@@ -1814,5 +1814,38 @@ html {
         flex: none !important;
     }
 }
+
+/* تعديلات خاصة بالموبايل - أضيفي في نهاية الملف */
+@media screen and (max-width: 768px) {
+    /* إصلاح عرض بطاقات التواصل */
+    .contact-container {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        flex-direction: unset !important;
+        overflow-x: unset !important;
+        width: 100% !important;
+    }
+
+    .contact-card {
+        width: 100% !important;
+        min-width: unset !important;
+        margin: 5px !important;
+    }
+
+    /* إصلاح عرض بطاقات الكورسات */
+    .certificates-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        flex-direction: unset !important;
+        overflow-x: unset !important;
+        width: 100% !important;
+    }
+
+    .certificate-card {
+        width: 100% !important;
+        min-width: unset !important;
+        margin: 5px !important;
+    }
+}
   
   
