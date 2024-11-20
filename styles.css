@@ -1857,7 +1857,7 @@ html {
         top: 0 !important;
         left: 0 !important;
         width: 100% !important;
-        height: 30px !important; /* تص��ير أكثر */
+        height: 30px !important; /* تصير أكثر */
         background: rgba(255, 255, 255, 0.05) !important;
         z-index: 9999 !important;
     }
@@ -1996,6 +1996,31 @@ body {
         width: 25px !important;
         height: 25px !important;
         margin-bottom: 5px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* تحسين شكل الاسم في الشريط العلوي */
+    .nav-brand {
+        font-size: 10px !important;
+        padding: 2px 5px !important;
+        height: 18px !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 2px !important; /* المسافة بين Ziad و Emad */
+    }
+
+    /* إزالة الخط المائل وتنسيق / */
+    .nav-brand span:nth-child(2) {
+        margin: 0 2px !important;
+        opacity: 0.7 !important;
+    }
+
+    /* تنسيق النص نفسه */
+    .nav-brand span {
+        line-height: 1 !important;
+        display: inline-block !important;
+        vertical-align: middle !important;
     }
 }
   
