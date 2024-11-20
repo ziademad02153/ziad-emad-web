@@ -1929,5 +1929,37 @@ html {
         margin-right: 8px !important;
     }
 }
+
+@media screen and (max-width: 768px) {
+    /* تحسين توسيط العناوين في بطاقات التواصل */
+    .contact-card {
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    .contact-info {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .contact-info h3 {
+        width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 5px !important;
+    }
+
+    /* تنظيم الأيقونة والنص */
+    .ios-icon {
+        margin: 0 auto 5px !important;
+        display: block !important;
+    }
+
+    /* جعل المحتوى في عمود واحد */
+    .contact-card {
+        flex-direction: column !important;
+        padding: 10px !important;
+    }
+}
   
   
