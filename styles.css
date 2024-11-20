@@ -1895,5 +1895,39 @@ html {
         font-size: 0.8rem !important;
     }
 }
+
+@media screen and (max-width: 768px) {
+    /* تحسين عرض المعلومات في بطاقات التواصل */
+    .contact-card {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        padding: 10px !important;
+    }
+
+    .contact-info {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        white-space: nowrap !important; /* منع التفاف النص */
+    }
+
+    .contact-info h3 {
+        font-size: 0.8rem !important;
+        margin: 0 !important;
+    }
+
+    .contact-info p {
+        font-size: 0.8rem !important;
+        margin: 0 !important;
+    }
+
+    /* تصغير الأيقونة */
+    .ios-icon {
+        width: 20px !important;
+        height: 20px !important;
+        margin-right: 8px !important;
+    }
+}
   
   
