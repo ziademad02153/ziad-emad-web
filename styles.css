@@ -1783,5 +1783,36 @@ html {
         margin: 5px 0 !important;
     }
 }
+
+/* إضافة هذه الأكواد في نهاية ملف CSS الخاص بك */
+@media screen and (max-width: 768px) {
+    .contact-section .contact-container {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 15px !important;
+        overflow: visible !important;
+        padding: 15px !important;
+    }
+
+    .contact-section .contact-card {
+        width: auto !important;
+        min-width: 0 !important;
+        flex: none !important;
+    }
+
+    .certificates-section .certificates-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 15px !important;
+        overflow: visible !important;
+        padding: 15px !important;
+    }
+
+    .certificates-section .certificate-card {
+        width: auto !important;
+        min-width: 0 !important;
+        flex: none !important;
+    }
+}
   
   
