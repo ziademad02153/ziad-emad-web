@@ -1897,55 +1897,49 @@ html {
 }
 
 @media screen and (max-width: 768px) {
-    /* تحسين عرض المعلومات في بطاقات التواصل */
+    /* تحسين شكل بطاقات التواصل */
     .contact-card {
-        display: flex !important;
-        flex-direction: row !important;
+        display: grid !important;
+        grid-template-columns: 40px 1fr !important; /* عمود للأيقونة وعمود للنص */
         align-items: center !important;
-        justify-content: flex-start !important;
-        padding: 12px !important;
-        gap: 15px !important;
-        width: 100% !important;
+        padding: 15px 10px !important;
+        gap: 12px !important;
+        min-height: 70px !important;
     }
 
     /* تنسيق الأيقونة */
     .ios-icon {
-        width: 30px !important;
-        height: 30px !important;
-        margin: 0 !important;
-        padding: 0 !important;
+        width: 35px !important;
+        height: 35px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+        margin: 0 !important;
     }
 
     /* تنسيق حاوية المعلومات */
     .contact-info {
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 3px !important;
-        flex: 1 !important;
-        overflow: hidden !important;
+        justify-content: center !important;
+        gap: 4px !important;
     }
 
-    /* تنسيق العناوين والنصوص */
+    /* تنسيق العناوين */
     .contact-info h3 {
-        font-size: 0.85rem !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
         margin: 0 !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        width: 100% !important;
+        line-height: 1.2 !important;
+        color: #333 !important;
     }
 
+    /* تنسيق النصوص */
     .contact-info p {
-        font-size: 0.8rem !important;
+        font-size: 13px !important;
         margin: 0 !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        width: 100% !important;
+        line-height: 1.2 !important;
+        color: #666 !important;
     }
 }
 
