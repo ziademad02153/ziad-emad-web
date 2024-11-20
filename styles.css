@@ -1900,33 +1900,38 @@ html {
     /* تحسين عرض المعلومات في بطاقات التواصل */
     .contact-card {
         display: flex !important;
+        flex-direction: row !important;
         align-items: center !important;
-        justify-content: flex-start !important;
-        padding: 10px !important;
+        padding: 15px !important;
+        gap: 10px !important;
     }
 
+    /* تنسيق الأيقونة */
+    .ios-icon {
+        width: 24px !important;
+        height: 24px !important;
+        margin: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* تنسيق معلومات التواصل */
     .contact-info {
         display: flex !important;
-        align-items: center !important;
-        gap: 10px !important;
-        white-space: nowrap !important; /* منع التفاف النص */
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 2px !important;
     }
 
     .contact-info h3 {
-        font-size: 0.8rem !important;
+        font-size: 0.9rem !important;
         margin: 0 !important;
+        text-align: left !important;
     }
 
     .contact-info p {
         font-size: 0.8rem !important;
         margin: 0 !important;
-    }
-
-    /* تصغير الأيقونة */
-    .ios-icon {
-        width: 20px !important;
-        height: 20px !important;
-        margin-right: 8px !important;
+        text-align: left !important;
     }
 }
 
