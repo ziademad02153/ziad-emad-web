@@ -1663,49 +1663,54 @@ html {
 @media (max-width: 768px) {
     /* تصغير الهوامش العلوية */
     .container {
-        margin-top: 20px !important;
+        margin-top: 80px !important;
+        padding: 10px !important;
         width: 95% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
-    /* تحسين قسم الملف الشخصي */
-    .profile-section {
-        margin: 0 !important;
-        padding: 1.5rem !important;
-    }
-
-    /* تنظيم المهارات بشكل أفضل */
+    /* تصحيح عرض قسم المهارات */
     .skills-container {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important; /* 3 أيقونات في كل صف */
+        grid-template-columns: repeat(3, 1fr) !important;
         gap: 10px !important;
         padding: 10px !important;
     }
 
-    .skill-badge {
-        padding: 10px !important;
-        margin: 0 !important;
-    }
-
-    /* تحسين أقسام التواصل */
+    /* تصحيح قسم تواصل معي ليكون أفقي */
     .contact-container {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        gap: 15px !important;
         padding: 10px !important;
+        scroll-snap-type: x mandatory !important;
     }
 
     .contact-card {
-        margin: 5px 0 !important;
-        padding: 12px !important;
-    }
-
-    /* تحسين الشهادات */
-    .certificates-grid {
-        gap: 15px !important;
-        padding: 10px !important;
-    }
-
-    .certificate-card {
         min-width: 280px !important;
-        margin-right: 15px !important;
+        flex: 0 0 auto !important;
+        margin-right: 10px !important;
     }
+
+    /* تحسين حجم الصورة الشخصية */
+    .profile-image {
+        width: 120px !important;
+        height: 120px !important;
+        margin-top: 20px !important;
+    }
+
+    /* تحسين المسافات والهوامش */
+    .profile-section {
+        padding: 20px !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* تحسين أحجام النصوص */
+    h1 { font-size: 1.5rem !important; }
+    h2 { font-size: 1.3rem !important; }
+    h3 { font-size: 1.1rem !important; }
+    p { font-size: 0.9rem !important; }
 }
 
 /* تحسينات للشاشات الصغيرة جداً */
