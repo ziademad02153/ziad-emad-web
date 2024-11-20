@@ -1383,7 +1383,7 @@ html {
     font-weight: 500;
 }
 
-/* تحسين التجاوب */
+/* ��حسين التجاوب */
 @media (max-width: 768px) {
     .info-item p, 
     .info-item a {
@@ -2025,27 +2025,21 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    /* تصغير حجم الأيقونة في أول الموقع */
-    .profile-section .name-title {
-        font-size: 14px !important; /* تصغير حجم الخط */
-        padding: 4px 8px !important; /* تقليل المساحة الداخلية */
-        margin: 5px 0 !important; /* تقليل الهوامش */
+    /* تصغير حجم الاسم داخل الأيقونة في بداية الموقع */
+    .dev {
+        font-size: 12px !important;
+        padding: 3px 6px !important;
+        margin: 5px 0 !important;
         background: rgba(255, 255, 255, 0.1) !important;
         border-radius: 4px !important;
         display: inline-flex !important;
         align-items: center !important;
-        gap: 3px !important;
+        gap: 2px !important;
+        line-height: 1 !important;
     }
 
-    /* تنسيق الخط المائل */
-    .profile-section .name-title span:nth-child(2) {
-        margin: 0 2px !important;
-        opacity: 0.7 !important;
-    }
-
-    /* تنسيق النص */
-    .profile-section .name-title span {
-        line-height: 1.2 !important;
+    .dev span {
+        font-size: 12px !important;
     }
 }
   
