@@ -1902,36 +1902,50 @@ html {
         display: flex !important;
         flex-direction: row !important;
         align-items: center !important;
-        padding: 15px !important;
-        gap: 10px !important;
+        justify-content: flex-start !important;
+        padding: 12px !important;
+        gap: 15px !important;
+        width: 100% !important;
     }
 
     /* تنسيق الأيقونة */
     .ios-icon {
-        width: 24px !important;
-        height: 24px !important;
+        width: 30px !important;
+        height: 30px !important;
         margin: 0 !important;
-        flex-shrink: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
-    /* تنسيق معلومات التواصل */
+    /* تنسيق حاوية المعلومات */
     .contact-info {
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important;
-        gap: 2px !important;
+        gap: 3px !important;
+        flex: 1 !important;
+        overflow: hidden !important;
     }
 
+    /* تنسيق العناوين والنصوص */
     .contact-info h3 {
-        font-size: 0.9rem !important;
+        font-size: 0.85rem !important;
         margin: 0 !important;
-        text-align: left !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        width: 100% !important;
     }
 
     .contact-info p {
         font-size: 0.8rem !important;
         margin: 0 !important;
-        text-align: left !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        width: 100% !important;
     }
 }
 
