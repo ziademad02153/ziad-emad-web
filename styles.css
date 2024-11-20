@@ -1994,32 +1994,64 @@ body {
         top: 0 !important;
         left: 0 !important;
         width: 100% !important;
-        height: 50px !important; /* تقليل الارتفاع */
-        z-index: 1000 !important;
+        height: 45px !important; /* تقليل الارتفاع أكثر */
+        padding: 0 10px !important;
         background: rgba(255, 255, 255, 0.1) !important;
-        backdrop-filter: none !important;
+        z-index: 9999 !important;
+    }
+
+    /* تصحيح موضع الأيقونة والقائمة */
+    .nav-container {
+        height: 100% !important;
+        padding: 0 5px !important;
         display: flex !important;
         align-items: center !important;
-        padding: 0 15px !important;
     }
 
-    /* تصحيح موضع الحاوية الرئيسية */
-    .container {
-        margin-top: 60px !important; /* مسافة من الشريط العلوي */
-        padding-top: 10px !important;
+    .main-nav {
+        gap: 8px !important;
     }
 
-    /* إصلاح موضع الصورة الشخصية */
-    .profile-section {
-        margin-top: 0 !important;
-        position: relative !important;
-        z-index: 1 !important;
+    /* تحسين خانات التواصل */
+    .contact-container {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        padding: 10px !important;
     }
 
-    .profile-image {
-        margin-top: 10px !important;
-        position: relative !important;
-        z-index: 2 !important;
+    .contact-card {
+        height: 80px !important; /* ارتفاع ثابت */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 10px !important;
+    }
+
+    .contact-info {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 5px !important;
+    }
+
+    .contact-info h3 {
+        font-size: 13px !important;
+        margin: 0 !important;
+    }
+
+    .contact-info p {
+        font-size: 12px !important;
+        margin: 0 !important;
+    }
+
+    .ios-icon {
+        width: 25px !important;
+        height: 25px !important;
+        margin-bottom: 5px !important;
     }
 }
   
