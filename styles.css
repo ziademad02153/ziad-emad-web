@@ -1663,11 +1663,8 @@ html {
 @media (max-width: 768px) {
     /* تصغير الهوامش العلوية */
     .container {
-        margin-top: 80px !important;
-        padding: 10px !important;
-        width: 95% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
+        margin-top: 100px !important;
+        padding-top: 20px !important;
     }
 
     /* تصحيح عرض قسم المهارات */
@@ -1697,13 +1694,15 @@ html {
     .profile-image {
         width: 120px !important;
         height: 120px !important;
-        margin-top: 20px !important;
+        margin-top: 0 !important;
+        position: relative !important;
+        z-index: 1 !important;
     }
 
     /* تحسين المسافات والهوامش */
     .profile-section {
         padding: 20px !important;
-        margin-bottom: 15px !important;
+        margin-top: 20px !important;
     }
 
     /* تحسين أحجام النصوص */
