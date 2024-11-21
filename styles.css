@@ -1945,6 +1945,46 @@ html {
         font-size: 14px !important;
     }
 }
+
+@media screen and (max-width: 768px) {
+    /* تحسين تنسيق بطاقات التواصل */
+    .contact-card {
+        display: flex !important;
+        align-items: center !important;
+        padding: 10px !important;
+        gap: 10px !important;
+        height: auto !important;
+    }
+
+    /* تصغير الأيقونة */
+    .ios-icon {
+        width: 18px !important;
+        height: 18px !important;
+        min-width: 18px !important;
+    }
+
+    /* تحسين تنسيق النصوص */
+    .contact-info {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2px !important;
+    }
+
+    .contact-info h3 {
+        font-size: 10px !important;
+        font-weight: 600 !important;
+        margin: 0 !important;
+        line-height: 1.2 !important;
+        color: #333 !important;
+    }
+
+    .contact-info p {
+        font-size: 9px !important;
+        margin: 0 !important;
+        line-height: 1.2 !important;
+        color: #666 !important;
+    }
+}
   
   
   
