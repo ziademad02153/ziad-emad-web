@@ -1823,84 +1823,48 @@ html {
     .contact-container {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        flex-direction: unset !important;
-        overflow-x: unset !important;
-        width: 100% !important;
-    }
-
-    .contact-card {
-        width: 100% !important;
-        min-width: unset !important;
-        margin: 5px !important;
-    }
-
-    /* إصلاح عرض بطاقات الكورسات */
-    .certificates-grid {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        flex-direction: unset !important;
-        overflow-x: unset !important;
-        width: 100% !important;
-    }
-
-    .certificate-card {
-        width: 100% !important;
-        min-width: unset !important;
-        margin: 5px !important;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    /* تحسين الشريط العلوي */
-    .modern-header {
-        height: 35px !important;
-        background: rgba(255, 255, 255, 0.1) !important;
-        position: fixed !important;
-        top: 0 !important;
-        width: 100% !important;
-    }
-
-    /* تصغير الأيقونات في الشريط العلوي */
-    .nav-item {
-        font-size: 10px !important;
-        padding: 3px 6px !important;
-    }
-
-    /* تصغير الكلمة في أول الموقع */
-    .dev-title {
-        font-size: 12px !important;
-        padding: 4px 8px !important;
-        margin: 5px 0 !important;
-        background: rgba(255, 255, 255, 0.1) !important;
-        border-radius: 4px !important;
-    }
-
-    /* تحسين أيقونات التواصل */
-    .contact-card {
-        padding: 8px !important;
-        display: flex !important;
-        align-items: center !important;
         gap: 8px !important;
+        padding: 8px !important;
     }
 
-    .ios-icon {
-        width: 20px !important;
-        height: 20px !important;
+    .contact-card {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        padding: 8px !important;
+        gap: 6px !important;
+        background: rgba(255, 255, 255, 0.1) !important;
+        border-radius: 6px !important;
+        height: 45px !important; /* ارتفاع ثابت */
     }
 
-    .contact-info h3 {
-        font-size: 11px !important;
+    /* تصغير الأيقونة */
+    .contact-card .ios-icon {
+        width: 16px !important;
+        height: 16px !important;
+        min-width: 16px !important;
+    }
+
+    /* تحسين النصوص */
+    .contact-card .contact-info {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0px !important;
+        overflow: hidden !important;
+    }
+
+    .contact-card .contact-info h3 {
+        font-size: 9px !important;
+        font-weight: 500 !important;
         margin: 0 !important;
+        line-height: 1.2 !important;
     }
 
-    .contact-info p {
-        font-size: 10px !important;
+    .contact-card .contact-info p {
+        font-size: 8px !important;
         margin: 0 !important;
-    }
-
-    /* تعديل المسافة العلوية للمحتوى */
-    .container {
-        margin-top: 40px !important;
+        line-height: 1.2 !important;
+        opacity: 0.8 !important;
     }
 }
 
