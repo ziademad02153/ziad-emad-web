@@ -1949,6 +1949,36 @@ html {
         color: #666 !important;
     }
 }
+
+@media screen and (max-width: 768px) {
+    /* Adjust container spacing */
+    .container {
+        margin-top: 45px !important;
+        padding-top: 20px !important;
+    }
+
+    /* Move profile section down */
+    .profile-section {
+        margin-top: 15px !important;
+        padding-top: 15px !important;
+    }
+
+    /* Adjust profile image position */
+    .profile-image {
+        margin-top: 25px !important;
+        width: 120px !important;
+        height: 120px !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    /* Ensure header doesn't overlap */
+    .modern-header {
+        height: 35px !important;
+        z-index: 1000 !important;
+        background: rgba(255, 255, 255, 0.1) !important;
+    }
+}
   
   
   
