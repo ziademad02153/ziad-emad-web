@@ -1642,7 +1642,7 @@ html {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* تنسيق شريط التمرير */
+/* ت��سيق شريط التمرير */
 .certificates-grid::-webkit-scrollbar {
     height: 8px !important;
 }
@@ -1977,6 +1977,31 @@ html {
         height: 35px !important;
         z-index: 1000 !important;
         background: rgba(255, 255, 255, 0.1) !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* تصغير حجم الأيقونة في أول الموقع */
+    .profile-section .name-title {
+        font-size: 14px !important; /* تصغير حجم الخط */
+        padding: 4px 8px !important; /* تقليل المساحة الداخلية */
+        margin: 5px 0 !important; /* تقليل الهوامش */
+        background: rgba(255, 255, 255, 0.1) !important;
+        border-radius: 4px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 3px !important;
+    }
+
+    /* تنسيق الخط المائل */
+    .profile-section .name-title span:nth-child(2) {
+        margin: 0 2px !important;
+        opacity: 0.7 !important;
+    }
+
+    /* تنسيق النص */
+    .profile-section .name-title span {
+        line-height: 1.2 !important;
     }
 }
   
