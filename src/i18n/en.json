@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "Where Fashion Meets Style",
+    "shopNow": "Shop Now",
+    "contactUs": "Contact Us"
+  },
+  "products": {
+    "title": "Latest Collection",
+    "categories": {
+      "all": "All",
+      "sportswear": "Sportswear",
+      "jeans": "Jeans",
+      "shirts": "Shirts",
+      "tshirts": "T-Shirts",
+      "jackets": "Jackets",
+      "pants": "Pants"
+    },
+    "addedToCart": "Added to cart"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "total": "Total",
+    "checkout": "Checkout via WhatsApp",
+    "newOrder": "New Order"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help",
+    "whatsapp": "WhatsApp",
+    "social": "Follow us on social media",
+    "location": "Our Location",
+    "openInMaps": "Open in Google Maps"
+  },
+  "footer": {
+    "tagline": "Where Fashion & Trends Meet",
+    "rights": "All Rights Reserved"
+  }
+}
